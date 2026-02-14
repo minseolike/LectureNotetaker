@@ -1,6 +1,6 @@
-# Lecture Notetaker
+# AI Lecture Notetaker
 
-Real-time lecture transcription system that understands your slides and medical terminology — outputting study-ready annotated PDFs.
+Let AI do the notetaking for you. A Real-time lecture transcription system that understands your slides and medical terminology — outputting study-ready annotated PDFs.
 
 ## Why I Built This
 
