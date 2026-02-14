@@ -4,7 +4,7 @@ Real-time lecture transcription system that understands your slides and medical 
 
 ## The Problem
 
-Medical students watch hours of recorded lectures and need accurate, structured notes. Existing tools fall short:
+Korean students watch hours of recorded lectures and need accurate, structured notes. Existing tools fall short:
 
 - **Generic transcription fails on medical terms** — tools like Otter.ai have no domain knowledge, dropping accuracy on specialized vocabulary
 - **Korean-English code-switching is unsupported** — professors say English terms phonetically in Korean (e.g., "오스테오포로시스" for "osteoporosis"), and no generic STT can handle this
@@ -39,17 +39,6 @@ Lecture Notetaker solves all of these by combining domain-specific STT, slide-aw
    - Generate concise bullet-point summaries per slide
 6. **Export** — annotated PDF with slide images, polished notes, and summaries in the margins
 
-## What Makes This Different
-
-| | Lecture Notetaker | Otter.ai / Generic STT |
-|---|---|---|
-| **Medical terms** | 570+ terms boosted in STT engine | No domain optimization |
-| **Slide awareness** | Each note tied to its slide with Vision AI context | Flat transcript, no slide context |
-| **Korean + English** | Phonetic mapping (오스테오포로시스 → osteoporosis) | Cannot handle code-switching |
-| **Refinement** | 4-stage LLM pipeline with medical knowledge | Single-pass or none |
-| **Output** | Annotated PDF with slide images + notes | Plain text transcript |
-| **Open source** | MIT License, fully customizable | Proprietary, closed |
-
 ## Features
 
 - **System audio capture** (WASAPI loopback) — no microphone needed
@@ -63,7 +52,6 @@ Lecture Notetaker solves all of these by combining domain-specific STT, slide-aw
 ## Tips for Best Results
 
 - **Pre-analyze first** — always run "Analyze Slides" before starting capture. This builds the term dictionary that powers accurate transcription
-- **Advance slides in sync** — press Page Down when the lecturer changes slides so notes are correctly grouped
 - **Use F5 for long slides** — if a lecturer stays on one slide for a long time, press F5 to flush accumulated notes mid-slide
 - **Add course-specific terms** — edit `medical/terms.py` with terms specific to your current course for better recognition
 - **Quiet audio environment** — since it captures system audio, close other audio sources (music, notifications) during lectures
