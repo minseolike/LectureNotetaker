@@ -1,0 +1,33 @@
+# Secrets & credentials
+.env
+*.json
+!pyproject.toml
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+
+# PyInstaller
+*.spec
+
+# pytest
+.pytest_cache/
+
+# Test artifacts
+test_audio/
+real_test/
+
+# Logs
+*.log
+
+# Windows / IDE / OS
+nul
+.vscode/
+*.swp
+Thumbs.db
+Desktop.ini
+.DS_Store
